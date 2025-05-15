@@ -1,4 +1,5 @@
 # Dados das Variações de Parâmetros
+
 ## CUBIC
 #### cubic/ delay 0/ loss 0
 | Transfer (h1) | Bandwidth (h1) | Transfer (h2) | Bandwidth (h2) |
@@ -80,7 +81,7 @@
 | 1.38 KBytes   | 11.5 Mbits/sec | 896  KBytes   | 7.34 Mbits/sec |
 | 256  KBytes   | 2.10 Mbits/sec | 768  KBytes   | 6.29 Mbits/sec |
 | 896  KBytes   | 7.34 Mbits/sec | 512  KBytes   | 4.19 Mbits/sec |
----
+
 ## RENO
 #### reno/ delay 0/ loss 0
 | Transfer (h1) | Bandwidth (h1) | Transfer (h2) | Bandwidth (h2) |
@@ -162,7 +163,7 @@
 | 512  KBytes   | 4.19 Mbits/sec | 0.00 Bytes    | 0.00 bits/sec  |
 | 2.12 MBytes   | 17.8 Mbits/sec | 0.00 Bytes    | 0.00 bits/sec  |
 | 384  KBytes   | 3.15 Mbits/sec | 0.00 Bytes    | 0.00 bits/sec  |
----
+
 ## VEGAS
 #### vegas/ delay 0/ loss 0
 | Transfer (h1) | Bandwidth (h1) | Transfer (h2) | Bandwidth (h2) |
@@ -245,3 +246,41 @@
 | 1.50 MBytes   | 12.6 Mbits/sec | 640  KBytes   | 5.24 Mbits/sec |
 | 640  KBytes   | 5.24 Mbits/sec | 896  KBytes   | 7.34 Mbits/sec |
 
+#### Algoritmo de Congestionamento TCP: CUBIC
+| Delay (ms) | Loss (%) | Transferência (min/avg/max) | Bandwidth (min/avg/max)          |
+|------------|----------|-----------------------------|----------------------------------|
+| 0          | 0        | 1770 / 2229 / 2640  MBytes  | 15200 / 19160 / 22700 Mbits/sec  |
+| 0          | 1        | 2.00 / 14.19 / 26.6 MBytes  | 16.8 / 127.55 / 223   Mbits/sec  |
+| 0          | 5        | 0.625 / 1.23 / 2.25 MBytes  | 5.24 / 10.69 / 18.9   Mbits/sec  |
+| 10         | 0        | 828 / 1007 / 1120	  MBytes  | 6960 / 8374 / 9600    Mbits/sec  |
+| 10         | 1        | 10.1 / 15.77 / 24.0 MBytes  | 84.9 / 132.2 / 201    Mbits/sec  |
+| 10         | 5        | 0.384 / 1.16 / 2.25 MBytes  | 3.15 / 10.64 / 18.9   Mbits/sec  |
+| 100        | 0        | 619 / 792 / 991	  MBytes  | 5200 / 6639 / 8310    Mbits/sec  |
+| 100        | 1        | 6.25 / 9.63 / 18.1  MBytes  | 52.4 / 80.8 / 152     Mbits/sec  |
+| 100        | 5        | 0.128 / 0.68 / 1.38 MBytes  | 1.05 / 6.29 / 15.7    Mbits/sec  |
+
+#### Algoritmo de Congestionamento TCP: RENO
+| Delay (ms) | Loss (%) | Transferência (min/avg/max) | Bandwidth (min/avg/max)          |
+|------------|----------|-----------------------------|----------------------------------|
+| 0          | 0        | 1840 / 2246 / 2970  MBytes  | 15800 / 19280 / 25500 Mbits/sec  |
+| 0          | 1        | 2.50 / 10.80 / 25.8 MBytes  | 21.0 / 90.6 / 216     Mbits/sec  |
+| 0          | 5        | 0.128 / 1.56 / 3.25 MBytes  | 1.05 / 12.3 / 27.3    Mbits/sec  |
+| 10         | 0        | 704 / 1017 / 1190	  MBytes  | 5910 / 8530 / 10200   Mbits/sec  |
+| 10         | 1        | 3.88 / 20.20 / 34.2 MBytes  | 32.5 / 170.6 / 287    Mbits/sec  |
+| 10         | 5        | 0.640 / 1.45 / 2.88 MBytes  | 5.24 / 12.1 / 24.1    Mbits/sec  |
+| 100        | 0        | 225 / 894 / 1340	  MBytes  | 1890 / 7490 / 11500   Mbits/sec  |
+| 100        | 1        | 6.88 / 14.30 / 27.6 MBytes  | 57.7 / 120.3 / 232    Mbits/sec  |
+| 100        | 5        | 0.00 / 2.10 / 17.2  MBytes  | 0.00 / 17.5 / 145     Mbits/sec  |
+
+#### Algoritmo de Congestionamento TCP: VEGAS
+| Delay (ms) | Loss (%) | Transferência (min/avg/max) | Bandwidth (min/avg/max)          |
+|------------|----------|-----------------------------|----------------------------------|
+| 0          | 0        | 1610 / 2242 / 2890  MBytes  | 13800 / 19270 / 24900 Mbits/sec  |
+| 0          | 1        | 3.62 / 12.30 / 29.8 MBytes  | 30.4 / 103.3 / 250    Mbits/sec  |
+| 0          | 5        | 0.00 / 1.68 / 5.62  MBytes  | 0.00 / 13.4 / 47.2    Mbits/sec  |
+| 10         | 0        | 904 / 1009 / 1060	  MBytes  | 7580 / 8600 / 9130    Mbits/sec  |
+| 10         | 1        | 10.0 / 21.80 / 54.6 MBytes  | 83.9 / 183.2 / 458    Mbits/sec  |
+| 10         | 5        | 0.00 / 1.26 / 4.88  MBytes  | 0.00 / 10.6 / 40.9    Mbits/sec  |
+| 100        | 0        | 3.50 / 48.90 / 341  MBytes  | 29.4 / 410.6 / 2860   Mbits/sec  |
+| 100        | 1        | 4.88 / 8.90 / 16.9  MBytes  | 40.9 / 74.8 / 142     Mbits/sec  |
+| 100        | 5        | 0.640 / 1.01 / 1.50 MBytes  | 5.24 / 8.06 / 12.6    Mbits/sec  |
