@@ -138,7 +138,7 @@ sudo sysctl -w net.ipv4.tcp_congestion_control="vegas" # ao iniciar a VM para si
 | 100        | 1        | 4.88 / 8.90 / 16.9  MBytes  | 40.9 / 74.8 / 142     Mbits/sec  |
 | 100        | 5        | 0.640 / 1.01 / 1.50 MBytes  | 5.24 / 8.06 / 12.6    Mbits/sec  |
 
-[*Ver todas as tabelas*](https://github.com/Dudubraga/Redes-de-Computadores/tree/main/Topologia_Dumbbell/Tabelas.md)
+[*Ver todas as tabelas*](https://github.com/Dudubraga/Redes-de-Computadores/tree/main/Topologia_Dumbbell/Dados.md)
 
 ### Gráficos
 <img src="./graficos/transferenciaMedia_x_delay(loss_0).png" alt="Transferência Média x Delay (loss = 0)" width="470"> 
